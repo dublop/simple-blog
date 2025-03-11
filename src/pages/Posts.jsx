@@ -12,7 +12,7 @@ const Posts = () => {
           <div key={post.id} className="bg-violet-600 text-white p-[20px] rounded-sm">
             <h4 className="mb-[10px]">{post.title}</h4>
             <Link to={post.id.toString()}>
-              <button className="bg-white dark:bg-slate-950 dark:text-white text-violet-600 p-[5px] rounded-sm">Ver post</button>
+              <button className="bg-white dark:bg-slate-950 dark:text-white text-violet-600 p-[5px] rounded-sm">View post</button>
             </Link>
           </div>
         ))}

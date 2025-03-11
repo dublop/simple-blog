@@ -3,9 +3,12 @@ import Home  from './pages/Home'
 import Posts, { postsLoader }  from './pages/Posts'
 import RootLayout  from './layout/RootLayout'
 import PostDetails, { postDetailsLoader }  from './components/PostDetails'
-import Navbar from './components/Navbar'
+import { useContext } from 'react'
+import {ThemeContext} from './context/ThemeContext'
 
 function App() {
+  const { theme } = useContext(ThemeContext)
+
   const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={<RootLayout />} >
       <Route index element={<Home />} />
@@ -16,11 +19,11 @@ function App() {
       </Route>
     </Route>
   ))
-
+  
   return (
-    <>
+    <div data-theme={theme}>
       <RouterProvider router={router}/>
-    </>
+    </div>
   )
 }
 
