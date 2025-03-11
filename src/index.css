@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+a.active {
+    @apply text-violet-600;
+}
